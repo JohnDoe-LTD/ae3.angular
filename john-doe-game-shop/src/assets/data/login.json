@@ -1,0 +1,10 @@
+{
+  "accessToken": "jwt-token",
+  "links": [
+    {
+      "rel": "self",
+      "link": "/assets/data/user.json",
+      "method": "get"
+    }
+  ]
+}

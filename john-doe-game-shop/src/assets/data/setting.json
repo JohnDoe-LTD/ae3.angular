@@ -1,0 +1,9 @@
+{
+  "uri": "http://localhost:4000/assets/data/setting.json",
+  "credentials":[
+    {
+      "username": "peter.parer",
+      "password": "123456"
+    }
+  ]
+}
