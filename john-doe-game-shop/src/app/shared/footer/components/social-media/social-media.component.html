@@ -1,0 +1,11 @@
+<div class="social-media">
+  <h3>{{this.model.title}}</h3>
+  <ul class="social-media-list">
+    <li class="social-media-item" *ngFor="let item of this.model.items">
+      <a class="social-media-link" href="{{item.url}}" target="_blank">
+        <img src="{{item.src}}" alt="{{item.alt}}" title="{{item.title}}" />
+      </a>
+    </li>
+  </ul>
+</div>
+

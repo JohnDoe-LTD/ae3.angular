@@ -4,5 +4,6 @@ export interface PageLink {
 }
 
 export interface PageLinkList {
+  title: string
   items: PageLink[]
 }

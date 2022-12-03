@@ -1,5 +1,7 @@
 .site-map{}
 
+.site-map > h4 {}
+
 .site-map-list{}
 
 .site-map-item{}
