@@ -1,0 +1,18 @@
+<aside class="footer-card">
+  <address class="footer-address-card">
+    <h4>{{model.companyName}}</h4>
+    <hr />
+    <p>
+      {{model.address}}, {{model.city}}, {{model.zipCode}}<br />
+      {{model.state}}, {{model.country}}
+    </p>
+    <p>
+      Phone: <a class="address-card-link" href="tel:{{model.phone}}" target="_blank">{{model.phone}}</a><br/>
+      Email: <a class="address-card-link" href="mailto:{{model.email}}" target="_blank">{{model.email}}</a>
+    </p>
+    <p>
+      Visit us at: <br>
+      <a class="address-card-link" href="{{model.website}}">{{model.website}}</a>
+    </p>
+  </address>
+</aside>
