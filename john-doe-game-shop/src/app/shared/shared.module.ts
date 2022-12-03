@@ -10,6 +10,7 @@ import { HeroComponent } from './hero/hero.component';
 import { FooterModule } from './footer/footer.module';
 import { FooterComponent } from './footer/components/footer/footer.component';
 import { AddressCardComponent } from './footer/components/address-card/address-card.component';
+import { ContentSectionComponent } from './content-section/content-section.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AddressCardComponent } from './footer/components/address-card/address-c
     GamesTableComponent,
     HeaderComponent,
     UserDetailsComponent,
-    HeroComponent
+    HeroComponent,
+    ContentSectionComponent
   ],
   imports: [
     CommonModule,
@@ -34,6 +36,7 @@ import { AddressCardComponent } from './footer/components/address-card/address-c
     HeroComponent,
     FooterComponent,
     AddressCardComponent,
+    ContentSectionComponent,
   ]
 })
 export class SharedModule { }
