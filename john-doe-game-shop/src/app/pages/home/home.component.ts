@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Figure } from 'src/app/shared/shared.models';
+import { Figure, Image } from 'src/app/shared/shared.models';
 import { Title } from '@angular/platform-browser';
 
 @Component({
@@ -11,16 +11,23 @@ export class HomeComponent {
   public figure1: Figure | undefined;
   public figure2: Figure | undefined;
   public figure3: Figure | undefined;
+  public image: Image | undefined;
 
   constructor(private title: Title) {
     this.title.setTitle("John Doe's Game Shop | Home");
+
+    this.image = {
+      alt: 'The best game shop in the city!',
+      src: '/assets/images/home/hero.jpg',
+      title: 'Come and know us!',
+    };
 
     this.figure1 = {
       caption: 'We got the latest titles earlier than anyone.',
       image: {
         alt: 'We have the best providers that any other competitor could desire',
         src: '/assets/images/home/latests-games.jpg',
-        title: 'Know or providers'
+        title: 'Know or providers',
       },
     };
 

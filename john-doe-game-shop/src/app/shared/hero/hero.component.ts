@@ -1,20 +1,13 @@
 import { Component, Input } from '@angular/core';
+import { Image } from '../shared.models';
 
 @Component({
   selector: 'app-hero',
   templateUrl: './hero.component.html',
-  styleUrls: ['./hero.component.css']
+  styleUrls: ['./hero.component.css'],
 })
 export class HeroComponent {
+  @Input() public image: Image | undefined;
 
-  @Input()
-  public src :string = '';
-
-  @Input()
-  public title :string = '';
-
-  @Input()
-  public alt :string = '';
-
-  constructor(){}
+  constructor() {}
 }
