@@ -1,0 +1,29 @@
+<nav class="main-menu">
+  <ul class="left-menu">
+    <li class="item-menu">
+      <a class="menu-link" routerLink="/">
+        <img src="{{src}}" alt="{{alt}}" title="{{title}}" class="menu-logo"/>
+      </a>
+    </li>
+    <li class="item-menu">
+      <a class="menu-link" routerLink="/">Home</a>
+    </li>
+    <li class="item-menu" *ngIf="isAuthenticated()">
+      <a class="menu-link" routerLink="/games">Games</a>
+    </li>
+    <li class="item-menu">
+      <a class="menu-link" routerLink="/about">About</a>
+    </li>
+    <li class="item-menu">
+      <a class="menu-link" routerLink="/contact">Contact</a>
+    </li>
+  </ul>
+  <ul class="right-menu">
+    <li class="item-menu" *ngIf="!isAuthenticated()">
+      <a class="menu-link" routerLink="/login">Login</a>
+    </li>
+    <li class="item-menu" *ngIf="isAuthenticated()">
+      <a class="menu-link" routerLink="/logout">logout</a>
+    </li>
+  </ul>
+</nav>
