@@ -1,0 +1,26 @@
+<main>
+  <section class="game-details" *ngIf="this.game == undefined">
+    <header>
+      <h3>Game not found!</h3>
+    </header>
+  </section>
+  <section class="game-details" *ngIf="this.game !== undefined">
+    <header>
+      <h3>{{this.game!.title}}</h3>
+    </header>
+    <div class="game-row">
+      <div class="game-row-item">
+        <ul class="game-data">
+          <li>Title: {{this.game?.title}}</li>
+          <li>Company: {{this.game?.company}}</li>
+          <li>Ranking: {{this.game?.ranking}}</li>
+        </ul>
+      </div>
+      <div class="game-row-item">
+        <figure class="game-figure">
+          <img src="{{this.game?.imageUri}}" title="{{this.game?.title}}" alt="{{this.game?.title}}" class="game-image" />
+        </figure>
+      </div>
+    </div>
+  </section>
+</main>
