@@ -1,0 +1,51 @@
+<form [formGroup]="this.contactForm" (ngSubmit)="this.onSubmit()">
+
+  <h3>Contact form, solve all your doubts</h3>
+
+  <div [ngClass]="this.cssClass('subject')">
+    <label for="subject" class="form-label">Subject</label>
+    <input type="text" id="subject" formControlName="subject" class="form-control" />
+    <span class="input-feedback" *ngIf="this.isInvalid('subject')">
+      The subject is required. It should have a length of less than 100.
+    </span>
+    <p class="help-text">
+      What could we do for you?
+    </p>
+  </div>
+
+  <div [ngClass]="this.cssClass('name')">
+    <label for="name" class="form-label">Name</label>
+    <input type="text" id="name" formControlName="name" class="form-control" />
+    <span class="input-feedback" *ngIf="this.isInvalid('name')">
+      The name is required. It should have a length of less than 100.
+    </span>
+    <p class="help-text">
+      Tell us how we could address you
+    </p>
+  </div>
+
+  <div [ngClass]="this.cssClass('email')">
+    <label for="email" class="form-label">Email</label>
+    <input type="email" id="email" formControlName="email" class="form-control" />
+    <span class="input-feedback" *ngIf="this.isInvalid('email')">
+      The email is required. It should have a length of less than 100.
+    </span>
+    <p class="help-text">
+      Where could we answer you? (email)
+    </p>
+  </div>
+
+  <div [ngClass]="this.cssClass('message')">
+    <label for="message" class="form-label">Message</label>
+    <span *ngIf="this.isInvalid('message')">(*)</span>
+    <textarea id="message" formControlName="message" class="form-control"></textarea>
+    <span class="input-feedback" *ngIf="this.isInvalid('message')">
+      The email is required. It should have a length of less than 100.
+    </span>
+    <p class="help-text">
+      Please, describe what you need to talk about with us.
+    </p>
+  </div>
+
+  <button type="submit" class="btn btn-primary" [disabled]="!this.contactForm.valid">Send</button>
+</form>
