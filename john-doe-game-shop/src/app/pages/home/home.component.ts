@@ -25,16 +25,16 @@ export class HomeComponent {
     this.figure1 = {
       caption: 'We got the latest titles earlier than anyone.',
       image: {
-        alt: 'We have the best providers that any other competitor could desire',
+        alt: 'Latest game titles',
         src: '/assets/images/home/latests-games.jpg',
-        title: 'Know or providers',
+        title: 'We have the best providers that any other competitor could desire',
       },
     };
 
     this.figure2 = {
       caption: 'Know our activities',
       image: {
-        alt: 'Our games',
+        alt: 'Games community activities',
         src: '/assets/images/home/more-than-games.jpg',
         title: 'More than a simple shop, we are a community',
       },
