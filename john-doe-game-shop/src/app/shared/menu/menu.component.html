@@ -1,32 +1,32 @@
 <nav class="main-menu">
   <ul class="left-menu">
-    <li class="item-menu">
+    <li class="menu-item">
       <a class="menu-link" routerLink="/">
         <img src="{{this.logo?.src}}" alt="{{this.logo?.alt}}" title="{{this.logo?.title}}" class="menu-logo" />
       </a>
     </li>
-    <li class="item-menu">
+    <li class="menu-item">
       <a class="menu-link" routerLink="/">Home</a>
     </li>
-    <li class="item-menu" *ngIf="this.isAuthenticated">
+    <li class="menu-item" *ngIf="this.isAuthenticated">
       <a class="menu-link" routerLink="/games">Games</a>
     </li>
-    <li class="item-menu">
+    <li class="menu-item">
       <a class="menu-link" routerLink="/about">About</a>
     </li>
-    <li class="item-menu">
+    <li class="menu-item">
       <a class="menu-link" routerLink="/contact">Contact</a>
     </li>
   </ul>
   <ul class="right-menu">
-    <li class="item-menu" *ngIf="!this.isAuthenticated">
+    <li class="menu-item" *ngIf="!this.isAuthenticated">
       <a class="menu-link" routerLink="/login">Login</a>
     </li>
-    <li class="item-menu" *ngIf="this.isAuthenticated">
+    <li class="menu-item" *ngIf="this.isAuthenticated">
       Hello
       <a class="menu-link">{{this.name()}}!</a>
     </li>
-    <li class="item-menu" *ngIf="this.isAuthenticated">
+    <li class="menu-item" *ngIf="this.isAuthenticated">
       <a class="menu-link" (click)="this.logout()">logout</a>
     </li>
   </ul>
