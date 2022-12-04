@@ -1,0 +1,27 @@
+<div class="table-container">
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Title</th>
+        <th>Ranking</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let game of this.games" (click)="this.onSelectHandler(game)">
+        <td>
+          <span title="{{game.id}}">
+            {{game.id.substring(0, 4)}}...
+          </span>
+        </td>
+        <td>{{game.title}}</td>
+        <td>{{game.ranking}}</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="3">&nbsp;</td>
+      </tr>
+    </tfoot>
+  </table>
+</div>
