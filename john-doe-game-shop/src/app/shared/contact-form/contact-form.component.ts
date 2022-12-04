@@ -9,6 +9,9 @@ export class AppModule {}
   styleUrls: ['./contact-form.component.css'],
 })
 export class ContactFormComponent {
+
+  public isSended : boolean = false;
+
   public contactForm: FormGroup = new FormGroup({
     name: new FormControl('', [Validators.required, Validators.maxLength(100)]),
     email: new FormControl('', [
@@ -48,5 +51,6 @@ export class ContactFormComponent {
 
   public onSubmit(): void {
     console.log(this.contactForm.value);
+    this.isSended = true;
   }
 }

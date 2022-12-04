@@ -48,4 +48,9 @@
   </div>
 
   <button type="submit" class="btn btn-primary" [disabled]="!this.contactForm.valid">Send</button>
+
+  <div *ngIf="this.isSended" class="alert succeeded">
+    <p>Your message has been received, and we will answer you ASAP. Thanks for your time.</p>
+  </div>
+
 </form>
