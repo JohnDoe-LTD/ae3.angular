@@ -1,0 +1,11 @@
+<body>
+<h1>Lista de videojuegos</h1>
+
+<app-videojuego
+    *ngFor="let v of listaVideojuegos" (click)="seleccionar(v)"
+    [videojuego]="v"
+>
+</app-videojuego>
+
+
+</body>

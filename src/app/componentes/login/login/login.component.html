@@ -1,0 +1,36 @@
+<div id="contenedor">
+  <div id="central">
+      <div id="login">
+          <div class="titulo">
+              Bienvenido
+          </div>
+
+
+            <input id="nombre" [(ngModel)]="nombre" placeholder="Usuario" required/>
+
+              <input id="password "type="password" [(ngModel)]="password" placeholder="Contraseña" required>
+
+              <button (click)="login()">Login</button>
+
+
+
+          <div class="pie-form">
+              <p>Usuarios por defecto:</p>
+              <ul>
+                <li>
+                  usuario : usuario
+                </li>
+                <li>
+                  Maria : 1234
+                </li>
+                <li>
+                  Pepe : Patata
+                </li>
+              </ul>
+          </div>
+      </div>
+      <div class="inferior">
+          <a href="#">Volver</a>
+      </div>
+  </div>
+</div>
