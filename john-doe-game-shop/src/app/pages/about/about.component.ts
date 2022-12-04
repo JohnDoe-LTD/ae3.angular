@@ -16,7 +16,7 @@ export class AboutComponent {
 
   constructor(private title: Title){
 
-    this.title.setTitle("John Doe's Game Shop | About Us");
+    this.title.setTitle("John Doe's Game Shop | About");
 
     this.image = {
       alt: 'John\'s Doe team!',
