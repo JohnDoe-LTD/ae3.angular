@@ -1,6 +1,5 @@
-export interface Credentials {
+export interface Identity {
   username: string,
-  password: string,
   token: string,
   uri: string
 }
