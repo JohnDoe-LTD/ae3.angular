@@ -1,7 +1,8 @@
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { StoreService } from 'src/app/core/services/store.service';
-import { UserService } from 'src/app/core/services/user.service';
+import { AuthService } from 'src/app/core/services/auth.service';
+import { Image } from 'src/app/shared/shared.models';
 
 @Component({
   selector: 'app-menu',
@@ -9,56 +10,47 @@ import { UserService } from 'src/app/core/services/user.service';
   styleUrls: ['./menu.component.css'],
 })
 export class MenuComponent implements OnInit, OnDestroy {
-  private authtenticatied: boolean = false;
-  private username: string = '';
-  private loginSub: Subscription | undefined;
-  private logoutSub: Subscription | undefined;
 
-  @Input() public src: string = '';
-  @Input() public alt: string = '';
-  @Input() public title: string = '';
+  private onLoginSub: Subscription | undefined;
+  private onLogoutSub: Subscription | undefined;
 
-  public isAuthenticated(): boolean {
-    return this.authtenticatied;
+  public isAuthenticated : boolean = false;
+
+  @Input() public logo: Image | undefined;
+
+  constructor(private authService: AuthService, private router: Router) {
+    this.authService = authService;
+    this.isAuthenticated = this.authService.isAuthenticated()
   }
 
   public name(): string {
-    return this.username;
+    if (this.authService.isAuthenticated()) {
+      return this.authService.user()!.username;
+    }
+    return '';
   }
 
-  constructor(store: StoreService, private authService: UserService) {
-    let username: string = store.get('username');
-    if (username?.length > 0) {
-      this.authtenticatied = true;
-      this.username = username;
-      return;
-    }
-    this.authtenticatied = false;
-    this.username = '';
+  public logout() : void {
+    this.authService.signout();
+    this.router.navigate(["/"]);
   }
 
   ngOnDestroy(): void {
-    if (this.loginSub !== undefined) {
-      this.loginSub.unsubscribe();
+    if (this.onLoginSub !== undefined) {
+      this.onLoginSub.unsubscribe();
     }
 
-    if (this.logoutSub !== undefined) {
-      this.logoutSub.unsubscribe();
+    if (this.onLogoutSub !== undefined) {
+      this.onLogoutSub.unsubscribe();
     }
   }
 
   ngOnInit(): void {
-    this.loginSub = this.authService.status.subscribe(this.setUsername);
-    this.logoutSub = this.authService.status.subscribe(this.reset);
+    this.onLoginSub = this.authService.onLoginEvent.subscribe((user) => {
+      this.isAuthenticated = true;
+    });
+    this.onLogoutSub = this.authService.onLogoutEvent.subscribe(() => {
+      this.isAuthenticated = false;
+    });
   }
-
-  private setUsername = () => {
-    this.username = '';
-    this.authtenticatied = true;
-  };
-
-  private reset = () => {
-    this.username = '';
-    this.authtenticatied = false;
-  };
 }

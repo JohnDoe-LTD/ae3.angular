@@ -2,13 +2,13 @@
   <ul class="left-menu">
     <li class="item-menu">
       <a class="menu-link" routerLink="/">
-        <img src="{{src}}" alt="{{alt}}" title="{{title}}" class="menu-logo"/>
+        <img src="{{this.logo?.src}}" alt="{{this.logo?.alt}}" title="{{this.logo?.title}}" class="menu-logo" />
       </a>
     </li>
     <li class="item-menu">
       <a class="menu-link" routerLink="/">Home</a>
     </li>
-    <li class="item-menu" *ngIf="isAuthenticated()">
+    <li class="item-menu" *ngIf="this.isAuthenticated">
       <a class="menu-link" routerLink="/games">Games</a>
     </li>
     <li class="item-menu">
@@ -19,11 +19,15 @@
     </li>
   </ul>
   <ul class="right-menu">
-    <li class="item-menu" *ngIf="!isAuthenticated()">
+    <li class="item-menu" *ngIf="!this.isAuthenticated">
       <a class="menu-link" routerLink="/login">Login</a>
     </li>
-    <li class="item-menu" *ngIf="isAuthenticated()">
-      <a class="menu-link" routerLink="/logout">logout</a>
+    <li class="item-menu" *ngIf="this.isAuthenticated">
+      Hello
+      <a class="menu-link">{{this.name()}}!</a>
+    </li>
+    <li class="item-menu" *ngIf="this.isAuthenticated">
+      <a class="menu-link" (click)="this.logout()">logout</a>
     </li>
   </ul>
 </nav>
