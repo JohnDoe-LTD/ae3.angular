@@ -1,0 +1,8 @@
+<main>
+  <section class="games-list">
+    <header>
+      <h3>My Games</h3>
+    </header>
+    <app-games-table [games]="this.games" (onSelect)="this.onClick($event)"></app-games-table>
+  </section>
+</main>
