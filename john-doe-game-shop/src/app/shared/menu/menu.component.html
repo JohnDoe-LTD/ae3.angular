@@ -1,0 +1,39 @@
+<div class="page-menu">
+  <div class="inline-menu">
+    <label for="check">
+      <img src="{{this.logo?.src}}" alt="{{this.logo?.alt}}" title="{{this.logo?.title}}" class="menu-logo" />
+    </label>
+    <label class="small-only">
+      John Doe's Game Shop
+    </label>
+  </div>
+  <input type="checkbox" id="check" name="check" />
+  <nav class="menu">
+    <ul class="left-menu">
+      <li class="menu-item">
+        <a class="menu-link" routerLink="/">Home</a>
+      </li>
+      <li class="menu-item" *ngIf="this.isAuthenticated">
+        <a class="menu-link" routerLink="/games">Games</a>
+      </li>
+      <li class="menu-item">
+        <a class="menu-link" routerLink="/about">About</a>
+      </li>
+      <li class="menu-item">
+        <a class="menu-link" routerLink="/contact">Contact</a>
+      </li>
+    </ul>
+    <ul class="right-menu">
+      <li class="menu-item" *ngIf="!this.isAuthenticated">
+        <a class="menu-link" routerLink="/login">Login</a>
+      </li>
+      <li class="menu-item" *ngIf="this.isAuthenticated">
+        Hello
+        <a class="menu-link-user" href="#">{{this.name()}}!</a>
+      </li>
+      <li class="menu-item" *ngIf="this.isAuthenticated">
+        <a class="menu-link" href="#" (click)="this.logout()">logout</a>
+      </li>
+    </ul>
+  </nav>
+</div>

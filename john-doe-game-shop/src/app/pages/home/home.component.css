@@ -1,0 +1,7 @@
+@media (min-width: 768px) {
+
+  #home-content > app-content-section > section > div  {
+    flex-direction: row-reverse;
+    color:red;
+  }
+}

@@ -1,0 +1,42 @@
+.hero {
+  width: 100%;
+  height: fit-content;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-figure {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-image {
+  min-width: 100%;
+  min-height: 450px;
+  background-color: pink;
+}
+
+.hero-claim {
+  width: calc(100% - 60px);
+  background-color: #dddddd80;
+  text-align: right;
+  padding: 15px 30px;
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 1024px) {
+  .hero-claim {
+    width: calc(100% - 100px);
+    padding: 15px 50px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .hero-claim {
+    width: calc(100% - 200px);
+    padding: 15px 100px;
+  }
+}

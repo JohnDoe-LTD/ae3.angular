@@ -1,0 +1,15 @@
+<address class="company-address">
+  <h3>{{model.companyName}}</h3>
+  <p>
+    {{model.address}}, {{model.city}}, {{model.zipCode}}<br />
+    {{model.state}}, {{model.country}}
+  </p>
+  <p>
+    Phone: <a class="company-address-link" href="tel:{{model.phone}}" target="_blank">{{model.phone}}</a><br/>
+    Email: <a class="company-address-link" href="mailto:{{model.email}}" target="_blank">{{model.email}}</a>
+  </p>
+  <p>
+    Visit us at: <br>
+    <a class="company-address-link" href="{{model.website}}">{{model.website}}</a>
+  </p>
+</address>

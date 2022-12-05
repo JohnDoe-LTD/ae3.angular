@@ -1,0 +1,25 @@
+.social-media{
+  width: 100%;
+}
+
+.social-media-list{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+
+.social-media-item{
+  list-style-type: none;
+  padding: 5px;
+}
+
+.social-media-link{
+  text-decoration: none;
+}
+
+.social-media-link > img {
+  max-width: 40px;
+}

@@ -1,0 +1,8 @@
+<div class="site-map">
+  <h3>{{this.model.title}}</h3>
+  <ul class="site-map-list">
+    <li class="site-map-item" *ngFor="let item of this.model.items">
+      <a class="site-map-link" routerLink="{{item.url}}">{{item.label}}</a>
+    </li>
+  </ul>
+</div>

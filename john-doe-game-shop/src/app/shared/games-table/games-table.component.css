@@ -1,0 +1,42 @@
+.table-container {
+  width: 100%;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table > thead > tr > th {
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: var(--primary);
+  color: var(--invert-primary);
+}
+
+.table > tbody > tr > td {
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.table > tbody > tr > td > span {
+  text-decoration: underline;
+  color: var(--primary-link);
+}
+
+.table > tbody > tr > td:first-child {
+  max-width: 60px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.table > tbody > tr > td,
+.table > thead > tr > th {
+  padding: 10px;
+  text-align: left;
+}
+
+.table-striped > tbody > tr:nth-child(odd) {
+  background-color: var(--disable);
+}

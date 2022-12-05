@@ -1,0 +1,14 @@
+{
+  "id": "9478e8ad-8963-4426-af47-b2ca9d4e518a",
+  "title": "Grand Theft Auto V",
+  "company": "Rockstar Games",
+  "imageUri": "/assets/images/game.jpg",
+  "ranking": 1,
+  "links":[
+    {
+      "rel": "self",
+      "href": "/assets/data/game.json",
+      "method": "GET"
+    }
+  ]
+}
