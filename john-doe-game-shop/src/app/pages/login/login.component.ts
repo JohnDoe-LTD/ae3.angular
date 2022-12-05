@@ -46,7 +46,7 @@ export class LoginComponent {
       throw Error(`invalid fieldName: ${field}`);
     }
 
-    return this.isInvalid(field) ? 'form-control has-error' : 'form-control';
+    return this.isInvalid(field) ? 'form-group has-error' : 'form-group';
   }
 
   public onSubmit(): void {

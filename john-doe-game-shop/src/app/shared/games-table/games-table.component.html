@@ -1,5 +1,5 @@
 <div class="table-container">
-  <table>
+  <table class="table table-striped">
     <thead>
       <tr>
         <th>#</th>
@@ -11,7 +11,7 @@
       <tr *ngFor="let game of this.games" (click)="this.onSelectHandler(game)">
         <td>
           <span title="{{game.id}}">
-            {{game.id.substring(0, 4)}}...
+            {{game.id}}...
           </span>
         </td>
         <td>{{game.title}}</td>

@@ -1,11 +1,12 @@
 .company-address{
+  width: 100%;
 }
 
-.company-address > h4 {
+.company-address > h3 {
+  text-transform: uppercase;
+  font-style: normal;
 }
 
 .company-address > p {
-}
-
-.company-address-link{
+  font-style: normal;
 }

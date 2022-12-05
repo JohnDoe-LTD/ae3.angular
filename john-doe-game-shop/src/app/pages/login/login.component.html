@@ -2,9 +2,9 @@
   <div class="login-row">
     <form [formGroup]="this.loginForm" (ngSubmit)="this.onSubmit()" class="login-row-item">
       <header>
-        <h3>Login</h3>
+        <h2>Login</h2>
       </header>
-      <div [ngClass]="this.cssClass('username')">
+      <div [ngClass]="this.cssClass('username')" class="form-group">
         <label for="username" class="form-label">Username</label>
         <input type="email" id="username" formControlName="username" class="form-control" />
         <span class="input-feedback" *ngIf="this.isInvalid('username')">
@@ -14,7 +14,7 @@
           Introduce the username of your account.
         </p>
       </div>
-      <div [ngClass]="this.cssClass('password')">
+      <div [ngClass]="this.cssClass('password')" class="form-group">
         <label for="password" class="form-label">Password</label>
         <input type="password" id="password" formControlName="password" class="form-control" />
         <span class="input-feedback" *ngIf="this.isInvalid('password')">
@@ -27,7 +27,7 @@
 
       <button type="submit" class="btn btn-primary" [disabled]="!this.loginForm.valid">Login</button>
 
-      <div class="help-text has-error">
+      <div class="has-error">
         <p>{{this.feedback}}</p>
       </div>
     </form>

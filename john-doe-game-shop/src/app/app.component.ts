@@ -13,7 +13,7 @@ export class AppComponent {
 
   constructor() {
     this.logo = {
-      src: '/assets/images/logo.jpg',
+      src: '/assets/images/logo.png',
       title: "John Doe's Game Shop",
       alt: 'Go Home!',
     };

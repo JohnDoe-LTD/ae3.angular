@@ -1,17 +1,16 @@
 <section class="content-section">
-  <div class="content-section-row">
-    <div class="content-section-item">
-      <article class="content-section-article">
-        <ng-content></ng-content>
-      </article>
-    </div>
-    <div class="content-section-item">
-      <figure class="content-section-figure">
-        <img class="content-section-image" src="{{this.figure?.image?.src}}" alt="{{this.figure?.image?.alt}}" title="{{this.figure?.image?.title}}" />
-        <figcaption>
-          {{this.figure?.caption}}
-        </figcaption>
-      </figure>
-    </div>
+  <div class="content-section-item">
+    <article class="content-section-article">
+      <ng-content></ng-content>
+    </article>
+  </div>
+  <div class="content-section-item">
+    <figure class="content-section-figure">
+      <img class="content-section-image" src="{{this.figure?.image?.src}}" alt="{{this.figure?.image?.alt}}"
+        title="{{this.figure?.image?.title}}" />
+      <figcaption>
+        {{this.figure?.caption}}
+      </figcaption>
+    </figure>
   </div>
 </section>

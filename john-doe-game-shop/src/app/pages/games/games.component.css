@@ -1,1 +1,4 @@
-.games-list{}
+.games-list{
+  width: calc(100% - 40px);
+  padding: 20px;
+}

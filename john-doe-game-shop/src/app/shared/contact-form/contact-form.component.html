@@ -1,4 +1,4 @@
-<form [formGroup]="this.contactForm" (ngSubmit)="this.onSubmit()">
+<form [formGroup]="this.contactForm" class="form" (ngSubmit)="this.onSubmit()">
 
   <h3>Contact form, solve all your doubts</h3>
 
@@ -38,7 +38,7 @@
   <div [ngClass]="this.cssClass('message')">
     <label for="message" class="form-label">Message</label>
     <span *ngIf="this.isInvalid('message')">(*)</span>
-    <textarea id="message" formControlName="message" class="form-control"></textarea>
+    <textarea id="message" formControlName="message" rows="4" class="form-control"></textarea>
     <span class="input-feedback" *ngIf="this.isInvalid('message')">
       The email is required. It should have a length of less than 100.
     </span>

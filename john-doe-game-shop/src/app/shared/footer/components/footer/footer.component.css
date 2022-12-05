@@ -1,4 +1,32 @@
-.page-footer{}
+.page-footer {
+  width: 100%;
+  margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  background-color: var(--disable);
+}
 
-.footer-card{
+.footer-card {
+  width: calc(100% - 40px);
+  margin: auto;
+  padding: 20px;
+}
+
+@media (min-width: 768px) {
+  .footer-card {
+    max-width: calc((100% - 40px) / 3);
+    margin: auto;
+    padding: 20px;
+    width: fit-content;
+  }
+}
+
+@media (min-width: 1024px) {
+  .page-footer {
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1440px) {
 }
